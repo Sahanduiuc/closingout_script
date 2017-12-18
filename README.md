@@ -1,8 +1,9 @@
 # closingout_script
 This scripts demonstrates how to close out of a position at the end of the day based on market allocations the strategy holds.
 
-Previously, I had shown several scripts that did this by using either an internal variable, but some scripts didn't seem to close out
-properly. Though there were no errors, the best way to end scripts is with closing all market positions:
+Previously, I had shown several scripts that closed out positions based on an internal variable, however I noticed the script did
+not always completely close out positions at the end of the day, even though there was no bug in the code. Closing based on open
+market positions is a more robust way to ensure positions are properly terminated at the end of the day.
 
 ```
 if account[self.symbol].position.shares>0:
